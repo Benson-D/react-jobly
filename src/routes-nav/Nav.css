@@ -1,0 +1,19 @@
+.Nav {
+  background-color: hsl(218, 65%, 17%);
+  border-bottom: 2px solid hsla(0, 0%, 85%, 0.125);
+}
+
+.navbar-brand,
+.nav-link {
+  color: hsl(25, 100%, 97%);
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: hsl(0, 0%, 71%);
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: hsl(30, 83%, 51%);
+}

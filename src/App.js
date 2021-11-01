@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import Routes from "./Routes";
-import Nav from "./Nav";
+import Routes from "./routes-nav/Routes";
+import Nav from "./routes-nav/Nav";
 import { BrowserRouter } from "react-router-dom";
 import UserContext from "./UserContext";
 import JoblyApi from "./JoblyApi";
@@ -87,7 +87,7 @@ function App() {
   }
 
   return (
-    (isLoading &&
+    isLoading && (
       <div className="App">
         <BrowserRouter>
           <UserContext.Provider value={{ currUser }}>
