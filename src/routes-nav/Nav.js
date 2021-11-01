@@ -40,9 +40,9 @@ function Nav({ logOut }) {
               </NavLink>
             </li>
             <li className="nav-item me-4">
-              <NavLink className="nav-link" to="/" onClick={logOut}>
+              <Link className="nav-link" to="/" onClick={logOut}>
                 Log out {currUser.username}
-              </NavLink>
+              </Link>
             </li>
           </ul>
         ) : (

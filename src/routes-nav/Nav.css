@@ -4,16 +4,18 @@
 }
 
 .navbar-brand,
+.navbar-brand:hover,
 .nav-link {
   color: hsl(25, 100%, 97%);
 }
 
-.navbar-brand:hover,
 .nav-link:hover {
-  color: hsl(0, 0%, 71%);
+  color: hsl(25, 100%, 97%);
+  border-bottom: 3px solid rgb(0, 157, 248);
 }
 
 .nav-link.active {
   font-weight: bold;
-  color: hsl(30, 83%, 51%);
+  color: hsl(25, 100%, 97%);
+  border-bottom: 3px solid rgb(0, 157, 248);
 }

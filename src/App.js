@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState, useEffect } from "react";
 import Routes from "./routes-nav/Routes";
 import Nav from "./routes-nav/Nav";
