@@ -1,0 +1,13 @@
+.SearchForm {
+  display: flex;
+  justify-content: center;
+}
+
+.SearchForm-form {
+  display: flex;
+}
+
+/* .input-group {
+  display: flex;
+  justify-content: center;
+} */
