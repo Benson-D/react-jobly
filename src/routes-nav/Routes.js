@@ -28,27 +28,23 @@ function Routes({ signUpUser, loginUser, currUser, editUser }) {
       <Route exact path="/login">
         <LoginForm loginUser={loginUser} />
       </Route>
+      {currUser && (
+        <>
+          <Route exact path="/companies">
+            <CompanyList />
+          </Route>
+          <Route exact path="/companies/:handle">
+            <CompanyDetail />
+          </Route>
+          <Route exact path="/jobs">
+            <JobList />
+          </Route>
+          <Route exact path="/profile">
+            <ProfileForm editUser={editUser} />
+          </Route>
+        </>
+      )}
 
-      {currUser && (
-        <Route exact path="/companies">
-          <CompanyList />
-        </Route>
-      )}
-      {currUser && (
-        <Route exact path="/companies/:handle">
-          <CompanyDetail />
-        </Route>
-      )}
-      {currUser && (
-        <Route exact path="/jobs">
-          <JobList />
-        </Route>
-      )}
-      {currUser && (
-        <Route exact path="/profile">
-          <ProfileForm editUser={editUser} />
-        </Route>
-      )}
       <Redirect to="/" />
     </Switch>
   );
