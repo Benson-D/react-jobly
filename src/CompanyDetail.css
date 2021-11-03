@@ -1,0 +1,11 @@
+.CompanyDetail {
+  text-shadow: 4px 0px 6px rgba(132, 132, 132, 0.74);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.CompanyDetail-info {
+  background-color: hsl(0, 43%, 99%);
+  padding: 10px;
+  text-align: center;
+}

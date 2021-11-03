@@ -4,7 +4,6 @@ import SearchForm from "./SearchForm";
 import CompanyCard from "./CompanyCard";
 import Loading from "./Loading";
 import Errors from "./Errors";
-import "./CompanyList.css";
 
 /** Function renders List of companies
  *

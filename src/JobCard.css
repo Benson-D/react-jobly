@@ -6,7 +6,3 @@
   padding: 10px;
   height: 40%;
 }
-
-.JobCard:hover {
-  background: linear-gradient(#8eb3eb, #b8c6db);
-}

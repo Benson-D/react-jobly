@@ -1,6 +1,6 @@
 .Homepage {
   height: calc(40vh - 110px);
-  background-color: snow;
+  background-color: hsl(0, 43%, 99%);
   border-bottom: 2px solid hsla(0, 0%, 3%, 0.125);
   text-shadow: 4px 0px 6px rgba(132, 132, 132, 0.74);
 }

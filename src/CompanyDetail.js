@@ -4,6 +4,7 @@ import JobCardList from "./JobCardList";
 import Loading from "./Loading";
 import { useParams } from "react-router-dom";
 import Errors from "./Errors";
+import "./CompanyDetail.css";
 
 /** Function gives detail of a Company
  *
@@ -36,17 +37,17 @@ function CompanyDetail() {
     [handle]
   );
 
-  //   Effect will want to know about when handle changes
-
   if (errors) return <Errors errors={errors} />;
 
   if (!company) return <Loading />;
   console.log(company.jobs, "Company Jobs from API");
 
   return (
-    <div>
-      <h2>{company.name}</h2>
-      <p>{company.description}</p>
+    <div className="CompanyDetail col-md-8 offset-md-2">
+      <div className="CompanyDetail-info">
+        <h2>{company.name}</h2>
+        <p>{company.description}</p>
+      </div>
       <JobCardList jobs={company.jobs} />
     </div>
   );
