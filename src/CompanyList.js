@@ -46,7 +46,7 @@ function CompanyList() {
   if (!companies) return <Loading />;
 
   return (
-    <div className="CompanyList">
+    <div className="CompanyList col-md-8 offset-md-2">
       <SearchForm handleSearch={handleSearch} />
       {companies.length === 0 && searchTerm ? (
         <p>Sorry, no matching companies were found. 🥲 </p>

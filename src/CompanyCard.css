@@ -1,9 +1,22 @@
-.CompanyCard{
-  /* display: inline-block; */
-  margin-bottom:1em;
-  border: 1px solid black;
+.CompanyCard {
+  width: 60%;
+  margin: 1rem auto;
+  border: 2px solid black;
+  background: linear-gradient(#f5f7fa, #b8c6db);
   padding: 10px;
-  width:60%;
-  height:10%;
-  background-color:seashell;
+  height: 40%;
+}
+
+.CompanyCard a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.CompanyCard img {
+  width: 8rem;
+}
+
+.CompanyCard:hover {
+  background: linear-gradient(#8eb3eb, #b8c6db);
+  text-decoration: none;
 }
