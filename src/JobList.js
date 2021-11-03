@@ -44,14 +44,14 @@ function JobList() {
   if (!jobs) return <Loading />;
 
   return (
-    <div>
+    <section>
       <SearchForm handleSearch={handleSearch} />
       {jobs.length === 0 && searchTerm ? (
         <p>Sorry, no matching jobs were found. 🥲 </p>
       ) : (
         <JobCardList jobs={jobs} />
       )}
-    </div>
+    </section>
   );
 }
 

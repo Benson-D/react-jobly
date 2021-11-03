@@ -1,11 +1,17 @@
 .Homepage {
-  height: calc(40vh - 110px);
-  background-color: hsl(0, 43%, 99%);
-  border-bottom: 2px solid hsla(0, 0%, 3%, 0.125);
-  text-shadow: 4px 0px 6px rgba(132, 132, 132, 0.74);
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
 }
 
-h1 {
+.Homepage h1,
+.Homepage p {
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 5px 6px rgba(0, 0, 0, 0.76);
+}
+
+.Homepage h1 {
   padding-top: 10px;
   font-size: 38px;
 }
