@@ -66,7 +66,9 @@ class JoblyApi {
    */
 
   static async getJobs(searchTerm) {
-    let res = await this.request("jobs", { title: searchTerm });
+    let res = searchTerm
+      ? await this.request("jobs", { title: searchTerm })
+      : await this.request("jobs");
     return res.jobs;
   }
 

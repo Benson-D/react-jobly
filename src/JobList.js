@@ -10,7 +10,7 @@ import Errors from "./Errors";
  * State:
  *   jobs - []
  *   searchTerm - null
- *   isLoading - true
+ *
  *
  * Props: none
  *
@@ -18,14 +18,12 @@ import Errors from "./Errors";
  */
 
 function JobList() {
-  const [jobs, setJobs] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [jobs, setJobs] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
   console.log("JobCardList", { jobs, searchTerm });
 
   function handleSearch(searchTerm) {
     setSearchTerm(searchTerm);
-    setIsLoading(true);
   }
 
   useEffect(
@@ -35,27 +33,24 @@ function JobList() {
           const response = await JoblyApi.getJobs(searchTerm);
           setJobs(response);
         } catch (err) {
-          return <Errors errors={err} />
+          return <Errors errors={err} />;
         }
       }
       fetchJobs();
-      setIsLoading(false);
-      setSearchTerm(null);
     },
     [searchTerm]
   );
 
+  if (!jobs) return <Loading />;
+
   return (
     <div>
       <SearchForm handleSearch={handleSearch} />
-      {isLoading
-        ? <Loading />
-        : jobs.length === 0 && searchTerm ? (
-          <p>Sorry, no matching jobs were found. 🥲 </p>
-        ) : (
-          <JobCardList jobs={jobs} />
-        )
-      }
+      {jobs.length === 0 && searchTerm ? (
+        <p>Sorry, no matching jobs were found. 🥲 </p>
+      ) : (
+        <JobCardList jobs={jobs} />
+      )}
     </div>
   );
 }
