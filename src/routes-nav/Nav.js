@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
-import UserContext from "../UserContext";
+import UserContext from "../auth/UserContext";
 
 /** Renders Nav bar for app.
  *

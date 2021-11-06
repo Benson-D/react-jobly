@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Homepage.css";
-import UserContext from "../UserContext";
+import UserContext from "../auth/UserContext";
 
 /** Renders Homepage
  *

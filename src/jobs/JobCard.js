@@ -1,16 +1,29 @@
-import React from "react";
+import  { useState, useContext } from "react";
 import "./JobCard.css";
+import UserContext from "../auth/UserContext";
 
 /** Renders job cards
  *
- * props: title, company, salary, equity
- * state: N/A
+ * props: job an object { id, title, company, salary, equity }
+ * state: hasApplied - boolean
  *
  * JobCardList -> JobCard
  */
 
-function JobCard({ title, company, salary, equity }) {
-  // console.log("JobCard", { title, company, salary, equity });
+function JobCard({ job }) {
+  const { id, title, company, salary, equity } = job; 
+
+  const [hasApplied, setHasApplied] = useState(false);
+  const {handleAppliedtoJob} = useContext(UserContext)
+
+  function handleApplication(){
+    handleAppliedtoJob(id)
+    setHasApplied(true);
+    
+  }
+
+  const applied = hasApplied ? "Applied" : "Apply";
+
   return (
     <div className="JobCard card">
       <div className="card-body">
@@ -20,7 +33,7 @@ function JobCard({ title, company, salary, equity }) {
         <h3>{company}</h3>
         {salary && <div> salary: ${salary.toLocaleString()} </div>}
         {equity && <div> equity: {equity * 100} </div>}
-        <button className="btn btn-danger fw-bold text-uppercase float-end">Apply</button>
+        <button onClick={handleApplication} className="btn btn-danger fw-bold text-uppercase float-end" disabled={hasApplied}>{applied}</button>
       </div>
       
     </div>

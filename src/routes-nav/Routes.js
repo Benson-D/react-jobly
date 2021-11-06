@@ -4,8 +4,8 @@ import CompanyDetail from "../companies/CompanyDetail";
 import CompanyList from "../companies/CompanyList";
 import Homepage from "../homepage/Homepage";
 import JobList from "../jobs/JobList";
-import SignUpForm from "../SignUpForm";
-import LoginForm from "../LoginForm";
+import SignUpForm from "../auth/SignUpForm";
+import LoginForm from "../auth/LoginForm";
 import ProfileForm from "../ProfileForm";
 
 /** Routes

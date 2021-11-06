@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Routes from "./routes-nav/Routes";
 import Nav from "./routes-nav/Nav";
 import { BrowserRouter } from "react-router-dom";
-import UserContext from "./UserContext";
+import UserContext from "./auth/UserContext";
 import JoblyApi from "./JoblyApi";
 import jwt from "jsonwebtoken";
 
@@ -17,6 +17,7 @@ import jwt from "jsonwebtoken";
 function App() {
   const [currUser, setCurrUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem("token"));
+  const [appliedJob, setAppliedJob] = useState(new Set());
   const [isLoading, setIsLoading] = useState(false);
 
   console.log("App", { currUser, token });
@@ -56,7 +57,6 @@ function App() {
   async function editUser(formData) {
     console.log("edit user ran", { formData });
     const { username, password, firstName, lastName, email } = formData;
-    // await JoblyApi.login({ username, password });
 
     let token = await JoblyApi.login({ username, password });
     if (token) {
@@ -71,10 +71,19 @@ function App() {
     }
   }
 
+  async function handleAppliedtoJob(id){
+    if (appliedJob.has(id)) return; 
+    setAppliedJob(appliedJob.add(id))
+    console.log(appliedJob, "From app for job applying");
+  }
+
+  
+
   function logOut() {
     console.log("The logout was clicked");
     setCurrUser(null);
     setToken(null);
+    setAppliedJob(new Set());
     localStorage.removeItem("token");
   }
 
@@ -82,7 +91,7 @@ function App() {
     isLoading && (
       <div className="App">
         <BrowserRouter>
-          <UserContext.Provider value={{ currUser }}>
+          <UserContext.Provider value={{ currUser, handleAppliedtoJob }}>
             <Nav logOut={logOut} />
             <Routes
               signUpUser={signUpUser}

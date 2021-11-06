@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import Errors from "./Errors";
-import UserContext from "./UserContext";
+import UserContext from "./auth/UserContext";
 import "./ProfileForm.css";
 
 /** Renders edit profile form

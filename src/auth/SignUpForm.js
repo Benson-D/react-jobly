@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
 import UserContext from "./UserContext";
-import Errors from "./Errors";
+import Errors from "../Errors";
 import "./SignupForm.css";
 
 /** Renders signUpForm
