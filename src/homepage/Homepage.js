@@ -19,7 +19,7 @@ function Homepage() {
         <h1 className="mb-4 fw-bold">Jobly</h1>
         <p>A convenient but helpful way to jump start your career</p>
         {currUser && (
-          <p className="lead">Welcome Back, {currUser.firstName}!</p>
+          <p className="Homepage-welcome lead">Welcome Back, {currUser.firstName}!</p>
         )}
       </div>
     </main>
