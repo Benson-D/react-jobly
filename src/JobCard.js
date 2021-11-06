@@ -8,6 +8,7 @@ import "./JobCard.css";
  *
  * JobCardList -> JobCard
  */
+
 function JobCard({ title, company, salary, equity }) {
   // console.log("JobCard", { title, company, salary, equity });
   return (
@@ -19,7 +20,9 @@ function JobCard({ title, company, salary, equity }) {
         <h3>{company}</h3>
         {salary && <div> salary: ${salary.toLocaleString()} </div>}
         {equity && <div> equity: {equity * 100} </div>}
+        <button className="btn btn-danger fw-bold text-uppercase float-end">Apply</button>
       </div>
+      
     </div>
   );
 }
