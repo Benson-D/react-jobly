@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import CompanyDetail from "../CompanyDetail";
-import CompanyList from "../CompanyList";
+import CompanyDetail from "../companies/CompanyDetail";
+import CompanyList from "../companies/CompanyList";
 import Homepage from "../homepage/Homepage";
-import JobList from "../JobList";
+import JobList from "../jobs/JobList";
 import SignUpForm from "../SignUpForm";
 import LoginForm from "../LoginForm";
 import ProfileForm from "../ProfileForm";

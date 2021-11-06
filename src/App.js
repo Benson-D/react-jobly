@@ -39,13 +39,6 @@ function App() {
     [token]
   );
 
-  useEffect(
-    function currUpdate() {
-      console.log("currUser changed", { currUser });
-    },
-    [currUser]
-  );
-
   async function signUpUser(formData) {
     const token = await JoblyApi.signUp(formData);
     console.log("token from signUpUser has passed", { token });
