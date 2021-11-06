@@ -41,32 +41,42 @@ function LoginForm({ loginUser }) {
   }
 
   return (
-    <div className="LoginForm">
-      {error && <Errors errors={error} />}
-      <form className="LoginForm-Form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username</label>
-          <input
-            id="username"
-            name="username"
-            type="text"
-            value={formData.username}
-            onChange={handleChange}
-          ></input>
+    <section className="LoginForm">
+      <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+      
+        <h3 className="mb-3">Log In</h3>
+        <div className="LoginForm-card card">
+          <div className="card-body">
+            <form className="LoginForm-Form" onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label className="form-label">Username</label>
+                <input
+                  name="username"
+                  className="form-control"
+                  type="text"
+                  value={formData.username}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label className="form-label">Password</label>
+                <input
+                  name="password"
+                  className="form-control"
+                  type="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+              </div>
+
+              {error && <Errors errors={error} />}
+              
+              <button className="btn btn-primary"> Log In! </button>    
+            </form>
+          </div>
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            value={formData.password}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <button className="TextForm-Button"> Log In! </button>
-      </form>
-    </div>
+      </div>  
+    </section>
   );
 }
 

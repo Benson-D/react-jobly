@@ -1,50 +1,16 @@
+.ProfileForm h3 {
+  text-align: center;
+  margin-top: 12px;
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  text-shadow: 4px 5px 6px rgba(0, 0, 0, 0.76);
+
+}
+
+.ProfileForm-card{
+  background: linear-gradient(#f5f7fa, #b8c6db);
+}
+
 .ProfileForm {
-  background-color: snow;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 10rem;
-  width: 40%;
-  /* margin: auto; */
-  /* height: 15rem; */
-  margin-right: auto;
-  margin-left: auto;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.ProfileForm div {
-  margin: 5px;
-  position: relative;
-}
-
-.ProfileForm input {
-  border-radius: 3.5px;
-  outline: none;
-  border-width: 1px;
-  margin-left: 5%;
-}
-
-.ProfileForm label {
-  position: absolute;
-  left: -50%;
-}
-
-.ProfileForm button {
-  border-radius: 5px;
-  background-color: rgba(144, 211, 253, 0.975);
-  color: seashell;
-  padding: 15px 15px;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.ProfileForm button:hover {
-  transform: translateY(-4px);
-  background-color: rgba(70, 177, 243, 0.892);
-}
-
-.ProfileForm > .Errors h1 {
-  font-size: 13px;
-  color: hsl(0, 79%, 48%);
+  margin-bottom: 2rem;
 }

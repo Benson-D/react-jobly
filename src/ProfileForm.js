@@ -43,63 +43,69 @@ function ProfileForm({ editUser }) {
   }
 
   return (
-    <div className="ProfileForm">
-      {errors && <Errors errors={errors} />}
-      {isSuccessful && <h1>Updated profile successfully</h1>}
-      <form className="ProfileForm-Form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username</label>
-          <input
-            id="username"
-            name="username"
-            type="text"
-            value={formData.username}
-            onChange={handleChange}
-            disabled
-          ></input>
+    <div className="ProfileForm col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+      <h3>Profile</h3>
+      <div className="ProfileForm-card card">
+        <div className="card-body">
+          <form className="ProfileForm-Form" onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label className="form-label">Username</label>
+              <input
+                name="username"
+                className="form-control"
+                value={formData.username}
+                onChange={handleChange}
+                disabled
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">First Name</label>
+              <input
+                name="firstName"
+                className="form-control"
+                type="text"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Last Name</label>
+              <input
+                name="lastName"
+                className="form-control"
+                type="text"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input
+                name="email"
+                className="form-control"
+                type="text"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Password</label>
+              <input
+                name="password"
+                className="form-control"
+                type="password"
+                value={formData.password}
+                onChange={handleChange}
+              />
+            </div>
+
+            {errors && <Errors errors={errors} />}
+            {isSuccessful && <p className="text-center alert alert-success">Updated profile successfully!</p>}
+
+            <button className="ProfileForm btn btn-primary"> Update! </button>
+          </form>
         </div>
-        <div>
-          <label htmlFor="firstName">First Name</label>
-          <input
-            id="firstName"
-            name="firstName"
-            type="text"
-            value={formData.firstName}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="lastName">Last Name</label>
-          <input
-            id="lastName"
-            name="lastName"
-            type="text"
-            value={formData.lastName}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="text"
-            value={formData.email}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            value={formData.password}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <button className="ProfileForm-Button"> Update! </button>
-      </form>
+      </div>
     </div>
   );
 }

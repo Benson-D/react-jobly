@@ -8,9 +8,9 @@
 
 function Errors({ errors }) {
   return (
-    <div className="Errors">
+    <div className="Errors text-center alert alert-danger">
       {errors.map((err, idx) => (
-        <h1 key={idx}>{err}</h1>
+        <p className="mb-0 small" key={idx}>{err}</p>
       ))}
     </div>
   );

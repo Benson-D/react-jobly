@@ -46,63 +46,72 @@ function SignUpForm({ signUpUser }) {
   }
 
   return (
-    <div className="SignUpForm">
-      {error && <Errors errors={error} />}
-      <form className="SignUpForm-Form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username</label>
-          <input
-            id="username"
-            name="username"
-            type="text"
-            value={formData.username}
-            onChange={handleChange}
-          ></input>
+    <div className="SignUpForm col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+      <h3>Sign Up</h3>
+      <div className="SignUpForm-card card">
+        <div className="card-body">
+          <form className="Signup-Form" onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label className="form-label">Username</label>
+              <input
+                name="username"
+                className="form-control"
+                value={formData.username}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Password</label>
+              <input
+                name="password"
+                className="form-control"
+                type="password"
+                value={formData.password}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">First Name</label>
+              <input
+                name="firstName"
+                className="form-control"
+                type="text"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Last Name</label>
+              <input
+                name="lastName"
+                className="form-control"
+                type="text"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input
+                name="email"
+                className="form-control"
+                type="text"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+  
+            {error && <Errors errors={error} />}
+  
+            <button className="SignUpForm btn btn-primary"> Sign Up! </button>
+          </form>
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            value={formData.password}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="firstName">First Name</label>
-          <input
-            id="firstName"
-            name="firstName"
-            type="text"
-            value={formData.firstName}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="lastName">Last Name</label>
-          <input
-            id="lastName"
-            name="lastName"
-            type="text"
-            value={formData.lastName}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="text"
-            value={formData.email}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <button className="TextForm-Button"> Sign Up! </button>
-      </form>
+      </div>
     </div>
   );
 }
 
 export default SignUpForm;
+
+
+
