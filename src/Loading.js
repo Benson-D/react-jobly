@@ -1,4 +1,4 @@
-import { FaSpinner } from "react-icons/fa";
+import { ImSpinner2} from "react-icons/im";
 import "./Loading.css";
 /** Renders loading page
  * 
@@ -12,7 +12,7 @@ function Loading() {
   console.log("Loading page rendered");
   return (
     <div>
-      <h1><FaSpinner className="spinner"/></h1>
+      <h1><ImSpinner2 className="spinner"/></h1>
     </div>
   );
 }
