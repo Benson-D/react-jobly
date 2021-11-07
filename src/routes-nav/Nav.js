@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
 import UserContext from "../auth/UserContext";
+import { RiSuitcaseLine } from "react-icons/ri";
 
 /** Renders Nav bar for app.
  *
@@ -20,7 +21,7 @@ function Nav({ logOut }) {
     <nav className="Nav navbar navbar-expand-md">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Jobly
+          <RiSuitcaseLine className="Nav-logo"/>
         </Link>
         {currUser !== null ? (
           <ul className="navbar-nav ms-auto">
