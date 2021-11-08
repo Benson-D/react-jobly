@@ -28,7 +28,7 @@ npm test
   - A user can edit their profile
   - Apply for a job with a click of a button
   - Authentication is handled with [JSON Web Tokens](https://jwt.io/)
-  - Routes are protected so a user needs to be logged to access the application
+  - Routes are protected so a user needs to be logged in to access the application
 
 ## Features to add 
   - Live Search
