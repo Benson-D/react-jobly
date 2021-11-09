@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import UserContext from "./auth/UserContext";
 import JoblyApi from "./JoblyApi";
 import jwt from "jsonwebtoken";
+import Loading from "./Loading";
 
 /** Renders jobly app
  *
@@ -32,9 +33,12 @@ function App() {
           const user = await JoblyApi.getUser(username);
           console.log({ user }, "User info from fetchCurrUser");
           setCurrUser(user);
-          setIsLoading(true);
+          
         }
+        setIsLoading(true);
       }
+
+      setIsLoading(false);
       fetchCurrUser();
     },
     [token]
@@ -77,8 +81,6 @@ function App() {
     console.log(appliedJob, "From app for job applying");
   }
 
-  
-
   function logOut() {
     console.log("The logout was clicked");
     setCurrUser(null);
@@ -87,8 +89,9 @@ function App() {
     localStorage.removeItem("token");
   }
 
+  if (!isLoading) return <Loading/>;
+
   return (
-    isLoading && (
       <div className="App">
         <BrowserRouter>
           <UserContext.Provider value={{ currUser, handleAppliedtoJob }}>
@@ -103,7 +106,6 @@ function App() {
         </BrowserRouter>
       </div>
     )
-  );
 }
 
 export default App;
