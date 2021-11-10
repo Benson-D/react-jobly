@@ -1,9 +1,10 @@
-# Jobly-frontend
+# Jobly Frontend
 
 Jobly is full stack web application. The frontend consist of React and Bootstrap. 
 The backend utilizes Node, Express, and PostgreSQL. 
   - Mocks a job web application similiar to [Indeed](https://www.indeed.com) or [LinkedIn](https://www.linkedin.com)
   - For more details on the backend documentation please click [here](https://github.com/Benson-D/express-jobly)
+  - Link to Deployed App click [here](https://benson-jobly.surge.sh/)
 
 ## Installation
 **Frontend Setup**
@@ -37,6 +38,3 @@ npm test
   - Edit a company
   - User can apply for jobs through the backend 
   - Added testing for a secure application
-
-## Link to Deployed App
-  - [Jobly-Frontend](https://benson-jobly.surge.sh/)
