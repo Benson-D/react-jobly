@@ -18,9 +18,10 @@ import { RiSuitcaseLine } from "react-icons/ri";
 function Nav({ logOut }) {
   const { currUser } = useContext(UserContext);
   return (
-    <nav className="Nav navbar navbar-expand-md">
+    <nav className="Nav navbar navbar-expand-md navbar-expand-sm">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
+          Jobly
           <RiSuitcaseLine className="Nav-logo"/>
         </Link>
         {currUser !== null ? (

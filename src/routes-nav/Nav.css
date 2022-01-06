@@ -9,6 +9,10 @@
   color: hsl(25, 100%, 97%);
 }
 
+.navbar-brand {
+  position: relative;
+}
+
 .nav-link:hover {
   color: hsl(25, 100%, 97%);
   border-bottom: 3px solid rgb(0, 157, 248);
@@ -21,6 +25,8 @@
 }
 
 .Nav-logo {
-  height: 2.5rem;
+  height: 2rem;
   width: 4rem;
+  position: absolute;
+  bottom: 5px;
 }
