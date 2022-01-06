@@ -30,3 +30,18 @@
   position: absolute;
   bottom: 5px;
 }
+
+@media only screen and (max-width: 38.75em) {
+  .navbar-brand,
+  .navbar-brand:hover,
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .Nav-logo {
+    height: 1.5rem;
+    width: 3rem;
+    bottom: 4px;
+  }
+  
+}
