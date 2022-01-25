@@ -1,5 +1,6 @@
 import { ImSpinner2} from "react-icons/im";
 import "./Loading.css";
+
 /** Renders loading page
  * 
  * prop:N/A
